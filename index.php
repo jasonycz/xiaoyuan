@@ -3,10 +3,107 @@
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8">
 	<title>xiaoyuan</title>
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+  	<script src="js/idangerous.swiper.js"></script>
 </head>
+<style>
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  position: relative;
+  height: 100%;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+.swiper-slide {
+	width: 100%;
+}
+.swiper-slide .title {
+  font-style: italic;
+  font-size: 42px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  line-height: 45px;
+}
+.pagination {
+  position: absolute;
+  z-index: 20;
+  left: 10px;
+  bottom: 10px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #222;
+  margin-right: 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+</style>
 <body>
+<!-- <div class="swiper-container" >
+  <div class="swiper-wrapper" >
+<?php 
+	for ($i =1 ;$i<5;$i++) {
+?>		
+	<div class="swiper-slide"> 
+		<img src="<?php echo '/pic/'.$i.'.jpg' ?>" >
+	</div>
+<?php
+}
+?>
+  	</div>
+</div>
+<div class="pagination"></div> -->
 
 
+<!-- ---------视频------------ -->
+<?php 
+	for ($i =1 ;$i<5;$i++) {
+?>		
+	<video src="<?php echo '/vedio/'.$i.'.mp4' ?>" controls="controls" width="500px" height="500px">
+	</video>
+<?php
+}
+?> 
+<!-- $(document).ready(function{}) -->
+<script >
+$(function(){
+	// 免登录
+	// $(".main").hide();
+	// $(".byr-header-bar").hide();
+	// $("#trans-tooltip").hide();
+	$(".main").remove();
+	$(".byr-header-bar").remove();
+	$("#trans-tooltip").remove();
+	var mySwiper = $('.swiper-container').swiper({
+		loop: true,
+		pagination: '.pagination',
+    	paginationClickable: true,
+    	//其他设置
+    })
+});
+
+</script>
 <?php
 	
 	function p($str){
@@ -27,12 +124,12 @@
 		if(empty($url)){
 			return false;
 		}
-		// 优化  通过存入的filename来判断是不是图片  filename的数据可以从value.name 来
-		$ext = strrchr($filename, '.');
-		if($ext != '.gif' && $ext != ".jpg" && $ext != ".bmp" && $ext != ".jpeg"){
-			echo "不是图片格式！";
-			// return false;
-		}
+		// // 优化  通过存入的filename来判断是不是图片  filename的数据可以从value.name 来
+		// $ext = strrchr($filename, '.');
+		// if($ext != '.gif' && $ext != ".jpg" && $ext != ".bmp" && $ext != ".jpeg"){
+		// 	echo "不是图片格式！";
+		// 	// return false;
+		// }
 	  	// 为空就当前目录
 		if(empty($dir))$dir = './';
 
@@ -78,7 +175,16 @@
 	$code = $authorization_code[1];
 	// ps($code);
 	if(!$code){
-		return;
+		// return;
+?>
+ 	<script>
+		
+		$("#Username").val('ln2');
+		$("#Password").val('12345678');
+		$("#login_button").click();
+ 	</script>	
+	
+ <?php	
 	}
 	//  通过authorization Code 获取 Access Token
 	$access_token_url = "http://bbs.byr.cn/oauth2/token";
@@ -199,13 +305,13 @@
 	// -----------------------------------获取指定版面的信息
 			$pre_url = "https://bbs.byr.cn/open";
 			// $query_url = "/board/Picture.json";
-			$query_url = "/board/Travel.json";
+			 $query_url = "/board/Travel.json";
 
 			$url = $pre_url.$query_url;
 			$mode =2;
 			$count =50;
 			$start_page = 1;
-			$end_page = 2;
+			$end_page = 3;
 			$theme_article = array();
 			for($i=$start_page;$i<$end_page;$i++){
 				$get_data ="&mode=".$mode."&count=".$count."&page=".$i;
@@ -240,27 +346,25 @@
 		
 	}
 
-	p($pic);
+	// p($pic);
+
 	foreach ($pic as $key => $value) {
-		echo "<img src= ".$value['pic_url']." style=width:100px;height:100px/>";
-		// GrabImage($value['pic_url'],"./pic/",$value['pic_name']);
-	    GrabImage("$value","./travel/",$value['pic_name']);
+		// for test
+		$ext = strrchr($value['pic_name'], ".");
+		if($ext != '.gif' && $ext != ".jpg" && $ext != ".bmp" && $ext != ".jpeg"){
+
+		}else{
+			echo "<img src= ".$value['pic_url']." style=width:600px;height:600px/>";
+			// GrabImage($value['pic_url'],"./pic/",$ext);
+	    	// GrabImage("$value","./travel/",$ext);
+		}
+
+		
+
 	}
-
-	
-	
-	
-	 
-
-
-
-
-
 
 
 ?>
-
-
 
 
 

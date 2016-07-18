@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://localhost:8080/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -153,10 +153,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        xiaoyuan\Providers\AppServiceProvider::class,
+        xiaoyuan\Providers\AuthServiceProvider::class,
+        xiaoyuan\Providers\EventServiceProvider::class,
+        xiaoyuan\Providers\RouteServiceProvider::class,
 
     ],
 

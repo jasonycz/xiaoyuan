@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace xiaoyuan\Events;
 
 abstract class Event
 {
