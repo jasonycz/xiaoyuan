@@ -77,24 +77,21 @@ body {
 
 
 <!-- ---------视频------------ -->
-<?php 
+<!-- <?php 
 	for ($i =1 ;$i<5;$i++) {
 ?>		
 	<video src="<?php echo '/vedio/'.$i.'.mp4' ?>" controls="controls" width="500px" height="500px">
 	</video>
 <?php
 }
-?> 
+?>  -->
 <!-- $(document).ready(function{}) -->
 <script >
 $(function(){
 	// 免登录
-	// $(".main").hide();
-	// $(".byr-header-bar").hide();
-	// $("#trans-tooltip").hide();
-	$(".main").remove();
-	$(".byr-header-bar").remove();
-	$("#trans-tooltip").remove();
+	// $(".main").remove();
+	// $(".byr-header-bar").remove();
+	// $("#trans-tooltip").remove();
 	var mySwiper = $('.swiper-container').swiper({
 		loop: true,
 		pagination: '.pagination',
@@ -175,13 +172,13 @@ $(function(){
 	$code = $authorization_code[1];
 	// ps($code);
 	if(!$code){
-		// return;
+		return;
 ?>
  	<script>
-		
-		$("#Username").val('ln2');
-		$("#Password").val('12345678');
-		$("#login_button").click();
+		// 免登录
+		// $("#Username").val('ln2');
+		// $("#Password").val('12345678');
+		// $("#login_button").click();
  	</script>	
 	
  <?php	
@@ -289,8 +286,10 @@ $(function(){
 
 	// 6是休闲娱乐
 	// -----------------------------------获取指定分区的信息
+	// 5 生活时尚  6 休闲娱乐
 	$pre_url = "https://bbs.byr.cn/open";
-	$query_url = "/section/6.json";
+	// $query_url = "/section/6.json";
+	$query_url = "/section/5.json";
 	$url = $pre_url.$query_url;
 
 	// p($url.'?oauth_token='.$access_token);
@@ -303,15 +302,17 @@ $(function(){
 	// p('---------------');
 
 	// -----------------------------------获取指定版面的信息
+    // 缘来如此 Friends Travel Picture
 			$pre_url = "https://bbs.byr.cn/open";
 			// $query_url = "/board/Picture.json";
-			 $query_url = "/board/Travel.json";
+			// $query_url = "/board/Travel.json";
+			$query_url = "/board/Friends.json";
 
 			$url = $pre_url.$query_url;
 			$mode =2;
 			$count =50;
 			$start_page = 1;
-			$end_page = 3;
+			$end_page = 4;
 			$theme_article = array();
 			for($i=$start_page;$i<$end_page;$i++){
 				$get_data ="&mode=".$mode."&count=".$count."&page=".$i;
@@ -331,7 +332,8 @@ $(function(){
 	$temp = array();
 	foreach ($theme_article as $key => $value) {
 		// $query_url = "/article/Picture/".$value['id'].".json";
-		$query_url = "/article/Travel/".$value['id'].".json";
+		// $query_url = "/article/Travel/".$value['id'].".json";
+		$query_url = "/article/Friends/".$value['id'].".json";
 		$url = $pre_url.$query_url;
 		// p($url.'?oauth_token='.$access_token);
 		$res = file_get_contents($url.'?oauth_token='.$access_token);
