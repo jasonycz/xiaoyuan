@@ -312,7 +312,7 @@ $(function(){
 			$mode =2;
 			$count =50;
 			$start_page = 1;
-			$end_page = 4;
+			$end_page = 20;
 			$theme_article = array();
 			for($i=$start_page;$i<$end_page;$i++){
 				$get_data ="&mode=".$mode."&count=".$count."&page=".$i;
@@ -353,10 +353,10 @@ $(function(){
 	foreach ($pic as $key => $value) {
 		// for test
 		$ext = strrchr($value['pic_name'], ".");
-		if($ext != '.gif' && $ext != ".jpg" && $ext != ".bmp" && $ext != ".jpeg"){
+		if($ext != '.png' && $ext != '.gif' && $ext != ".jpg" && $ext != ".bmp" && $ext != ".jpeg"){
 
 		}else{
-			echo "<img src= ".$value['pic_url']." style=width:600px;height:600px/>";
+			echo "<img src= ".$value['pic_url']." style=width:200px;height:200px/>";
 			// GrabImage($value['pic_url'],"./pic/",$ext);
 	    	// GrabImage("$value","./travel/",$ext);
 		}

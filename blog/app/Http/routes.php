@@ -11,7 +11,45 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-    // return "hello world 你好";
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'WelcomeController@index');
+Route::auth();
+Route::get('home', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
+// Route::get('pages/{id}', 'PagesController@show');
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
+]);
+// Route::get('auth/login', 'Auth\AuthController@getLogin');
+// Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+// Route::post('comment/store', 'CommentsController@store');
+
+11
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function()
+{
+	Route::get('/', 'AdminHomeController@index');
+  	Route::resource('pages', 'PagesController');
+  	Route::resource('comments', 'CommentsController');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

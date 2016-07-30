@@ -1,0 +1,275 @@
+/* Versions Help stylesheet */
+
+/* Basic stuff */
+
+* {
+	margin: 0;
+	padding: 0;}
+
+body {
+	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+	font-size:12px;
+	}
+
+body {
+	padding: 3em 1em 1.2em 1em;
+	line-height: 1.2em;
+	}
+
+a {
+	text-decoration: none;
+	color: #15c;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+/* Styled elements */
+
+h1 {
+	font-size: 1.5em;
+	margin: 10px 0 3px 0.65em;
+	padding-left: 40px;
+	min-height: 32px;
+	background: url(./img/Versions_32.png) no-repeat center left;
+	-webkit-background-size: 32px 32px;
+	line-height: 32px;
+	}
+
+/*h1.indent {
+	margin: 10px 0 3px 0.65em;
+}
+*/
+/* The top navigation bar that's present in every page */
+
+div.topbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right:0;
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+	padding: 0.6em 0.5em 0.6em 1em;
+	color: #37f;
+	font-weight: bold;
+	text-shadow: #fff 1px 1px 0px;
+	font-size:13px;
+}
+
+div.topbar a {
+	color: #666;
+/*	font-weight: normal;*/
+}
+
+div.topbar a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+/*div.topbar span {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.3em 2.3em 0.3em 1em;
+	color: #666;
+	font-weight: light;
+}
+*/
+
+div.topbar span.divider {
+	padding: 0 0 0 0;
+	margin: 0 0.5em 0em 0.2em;
+	color: #bbb;
+	font-weight: light;
+	font-size: 0.5em;
+	line-height: 0.5em;
+}
+
+/* Table of contents style definitions */
+
+div.intro {
+	font-size: 9pt;
+	color:#333;
+	margin: 1.4em 1.4em;
+
+}
+
+ul.toc {
+	font-size: 8pt;
+	background-color: #f8f8f8;
+	padding: 0.8em 1.4em;
+	margin: 1.4em 0 0 0 ;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 10px;
+	list-style-type:none;
+}
+
+ul.toc a {
+	color: #778fbd;
+	font-weight: bold;
+	font-size: 10pt;
+	line-height: 11pt;
+}
+
+ul.toc a:hover {
+	text-decoration: underline;
+	}
+
+ul.toc li {
+		padding: 0.3em 0.3em 1em 0em;
+}
+
+/* Normal content style definitions - for use everywhere but the landing page */
+
+div.contents {
+	font-size: 9pt;
+	padding: 0.8em 1.4em;
+	color:#333;
+}
+
+div.contents h2 {
+	font-size: 1.2em;
+	color: #000;
+	padding: 0.6em 0.3em 0.3em 0em;
+	}
+
+div.contents h2:before{
+	content:"•  ";
+	color:#ddd;
+	font-size:0.75em;
+	margin: 0 0 0 -1.5em;
+}
+
+div.contents p {
+	padding: 0.3em 0.3em 1em 0em;
+}
+
+div.contents p.caption {
+	font-size: 0.85em;
+	font-style: italic;
+	padding: 0em 0.3em 1em 0em;
+}
+
+div.contents ul {
+	list-style-type:decimal;
+	list-style-position:outside;
+	padding: 0em 1.6em 1em 1.6em;
+	line-height:1.5em;
+}
+
+div.contents ul.bullets {
+	padding-left: 36px;
+	margin-top:0.3em;
+	list-style-type:disc;
+}
+
+div.contents img {
+	padding: 8px;
+	border: 1px solid #ccc;
+}
+
+/* special highlighting for technical terms */
+
+span.term {
+	background-color:#ddd;
+	padding: 0 0em 0 0em;
+	color: #222;
+	font-family: "Monaco", fixed-width;
+	font-weight: normal;
+}
+
+span.term:before {
+	font-family: "Lucida Grande";
+	background-color:#fff;
+	padding: 0 0.1em;
+	content:"\201c";
+}
+
+span.term:after {
+	font-family: "Lucida Grande";
+	background-color:#fff;
+	padding: 0 0.1em;
+	content:"\201d";
+}
+
+a.internal:before {
+	content:"\279c ";
+	font-size:0.8em;
+}
+
+div.screenshot {
+	display: block;
+}
+
+div.screenshot.bookmarks {
+	background: url(./img/screenshot_bookmarks.png);
+	background-size: 273px 294px;
+	width: 273px;
+	height: 294px;
+}
+
+div.screenshot.wc-toolbar {
+	background: url(./img/screenshot_wc_toolbar.png);
+	background-size: 376px 187px;
+	width: 376px;
+	height: 187px;
+}
+
+div.screenshot.browse {
+	background: url(./img/screenshot_browse.png);
+	background-size: 568px 210px;
+	width: 568px;
+	height: 210px;
+}
+
+div.screenshot.compare {
+	background: url(./img/screenshot_compare.png);
+	background-size: 507px 286px;
+	width: 507px;
+	height: 268px;
+}
+
+div.screenshot.icons {
+	background: url(./img/screenshot_icons.png);
+	background-size: 522px 248px;
+	width: 522px;
+	height: 248px;
+}
+
+div.screenshot.timeline {
+	background: url(./img/screenshot_timeline.png);
+	background-size: 629px 340px;
+	width: 629px;
+	height: 340px;
+}
+
+div.screenshot.transcript {
+	background: url(./img/screenshot_transcript.png);
+	background-size: 419px 151px;
+	width: 419px;
+	height: 151px;
+}
+
+
+/* Retina Support */
+@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		h1 { background: url(./img/Versions_32@2x.png) no-repeat center left; background-size: 32px 32px; }
+		div.screenshot.bookmarks { background: url(./img/screenshot_bookmarks@2x.png); background-size: 273px 294px; }
+		div.screenshot.wc-toolbar {	background: url(./img/screenshot_wc_toolbar@2x.png); background-size: 376px 187px; }
+		div.screenshot.browse {	background: url(./img/screenshot_browse@2x.png); background-size: 568px 210px; }
+		div.screenshot.compare { background: url(./img/screenshot_compare@2x.png); background-size: 507px 286px; }
+		div.screenshot.icons { background: url(./img/screenshot_icons@2x.png); background-size: 522px 248px; }
+		div.screenshot.timeline { background: url(./img/screenshot_timeline@2x.png); background-size: 629px 340px; }
+		div.screenshot.transcript { background: url(./img/screenshot_transcript@2x.png); background-size: 419px 151px; }
+	}

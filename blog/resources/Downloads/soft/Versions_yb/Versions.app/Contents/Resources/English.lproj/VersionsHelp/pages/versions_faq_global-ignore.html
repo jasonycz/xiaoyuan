@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>Using Global Ignores</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span><a href="versions_faq.html">FAQ</a>
+			<span class="divider">&#x25B6;</span>Using Global Ignores
+
+    		
+		</div>
+
+        
+		
+		<h1>Using Global Ignores</h1>	
+		<div class="contents">
+			<p>Sometimes, it can be annoying to see uninteresting, unversioned items—for example, files that result from a program's compilation. The Subversion global-ignores option is a whitespace-delimited list of names of files and directories that Subversion should not display unless they are versioned. The default values are: <span class="term"> *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.rej *~ #*# .#* .*.swp .DS_Store.</span></p>
+			<p>If you want to change this default list follow these steps:</p>
+			
+			<ul>
+				<li>Click the <span class="term">Go</span> main menu item in the Finder, and click the <span class="term">Go To Folder...</span> menu item.</li>
+				<li>Paste the following path <span class="term">~/.subversion/</span> and click on Go</li>
+				<li>A new Finder window will open that will contain several files</li>
+				<li>Open the file named <span class="term">config</span> in your text editor of choice</li>
+				<li>Please be careful while editing this file, it contains many settings, accidentally changing something can have unforeseen consequences</li>
+				<li>Do a search for <span class="term">global-ignores</span> and you will find that list of default values as shown above</li>
+				<li>Now make any edit you want to the list, and remove the <span class="term">#</span> character at the start of the line to make the ignore active</li>
+				<li>Save the file and you are all set.</li>
+			</ul>
+			
+			<p>Note: these settings only apply to your user account</p>
+			<p>More information on the global-config file and its settings can be found <a href="http://svnbook.red-bean.com/en/1.7/svn.advanced.confarea.html#svn.advanced.confarea.opts.config" target="_blank">here</a>. More information on using fine grained ignores in Versions can be found <a class="internal" href="versions_wf_browse_props.html">here</a>.</p>
+		</div>
+	
+
+	</body>
+
+</html>
+
+

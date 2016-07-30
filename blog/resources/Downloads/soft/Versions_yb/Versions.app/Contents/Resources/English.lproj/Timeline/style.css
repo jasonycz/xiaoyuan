@@ -1,0 +1,136 @@
+/* general styles */
+body {margin:0; padding:0; background-color:#e1e1e1; font-family:"Lucida Grande", Helvetica, sans-serif; font-size:12px;}
+a {text-decoration:none;}
+
+/* =============== Messages =================== */
+#messages #top_line {width:100%; position:fixed; height:1px; background-color:#cacaca;}
+#messages .message {position:absolute; top:50%; left:50%; width:430px; margin:-125px 0 0 -225px;
+	text-align:center; color:#878787; text-shadow:#fff 0px 1px 0px; padding:0 10px;}
+#messages .icon {height:93px; width:93px; margin:0px auto 10px auto; background-size: 93px 93px; }
+	.icon.wc_missing {background:url("timeline_icon_wc_missing.png")center center no-repeat;}
+	.icon.wc_not {background:url("timeline_icon_wc_not.png")center center no-repeat;}
+	.icon.connection {background:url("timeline_icon_connection.png")center center no-repeat;}
+	.icon.history {background:url("timeline_icon_history.png")center center no-repeat;}
+#messages .title {font-weight:bold; font-size:14px;}
+#messages .explanation, #messages .wc_path {margin:15px 0 0 0; line-height:1.8em; 
+	word-wrap:break-word; -webkit-user-select:text; cursor:text;}
+
+/* =============== Timeline =================== */
+
+/* inactive window states */
+body.inactive {background-color:#e8e8e8;}
+body.inactive .header {background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#F5F5F5), to(#E4E4E4));}
+body.inactive .header .title, body.inactive #timeline .header .summary {color:#7D7D7C;}
+body.inactive .header .disclosure, body.inactive .item .status {opacity:0.6;}
+
+/* make things unselectable */
+.header, .control, #more, #messages {-webkit-user-select:none; cursor:default;}
+.ticket, a {cursor:default;}
+
+/* day */
+.collapse {overflow:hidden;}
+.day {padding:29px 0 0 0; position:relative; background:#fff;}
+
+/* headers */
+.header {height:28px; width:100%; opacity:0.90; z-index:1; background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#D1D1D1));}
+.day:first-child .header {border-top:none; height:29px;}
+.header.normal {position:absolute; top:0; border-top:1px solid #b0b0b0; border-bottom:1px solid #A0A0A0;}
+.header.floating {position:fixed; top:0; border-top:none; border-bottom:1px solid #A0A0A0;}
+.header.scrolling {position:absolute; bottom:0; border-bottom:1px solid #D1D1D1}
+	.header:active {opacity:1.0;}
+.header .disclosure {float:left; margin:9px 0 0 10px; width:11px; height:11px; background:url('timeline_disclosure.png') 11px 0px; background-size: 22px 22px}
+	.header:active .disclosure {opacity:0.6;}
+	.header .disclosure.closed {background-position:11px 11px;}
+.header .title {font-weight:bold; height:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+	color:#3d3d3d;  text-shadow: #fff 0px 1px 0px; margin:6px 130px 0px 25px;}
+.header .summary {float:right; margin:-13px 12px 0 0; font-size:10px; color:#5F5F5F; text-shadow: #fff 0px 1px 0px;}
+
+/* commit */
+.commit {position:relative; background:#fff url('timeline_track.png') 14px 0px repeat-y; background-size: 2px 1px;
+	padding:8px 13px 10px 30px; border-bottom:1px solid #E9E9E6;}
+.day .commit:last-child {border-bottom:none;}
+.day:last-child .commit:last-child {border-bottom:1px solid #D6D6D6;}
+.bullet {position:absolute; left:11px; width:8px; height:15px; top:0;}
+.dot {position:absolute; top:11px; background-color:#E7E7E7; border-radius:4px; width:8px; height:8px;}
+
+/* commit header */
+.info {margin:0; color:#888;}
+.info .revision {font-weight:bold; color:#000;}
+
+/* compare and items control */
+.info .control {float:right; background-color:#dce6f1; text-shadow:#fff 0px 1px 0px;
+		padding:1px 2px 2px 3px; color:#8687A6; border-radius:3px; font-size:11px; background-color:#E5ECF5;}
+	.info .control:hover {background-color:#5A91E7; color:#fff; text-shadow: #1C2955 0px 1px 0px;}
+	.info .control:active {background-color:#4977BE;}
+.compare_control {margin-right:7px;}
+.file_list_control span.show {display:none;}
+.file_list_control.hidden span.show {display:inline;}
+.file_list_control.hidden span.hide {display:none;}
+
+/* commit message */
+.commit .message {padding:7px 100px 5px 0; line-height:1.6em; color:#555;}
+.commit .message p {margin:0; white-space:pre-wrap; word-wrap:break-word;}
+.commit .message a, span.ticket {padding:0px 1px 1px 2px; border-radius:3px; word-wrap:break-word;}
+	.message a {background-color:#dce6f1; color:#36547f;}
+	.message span.ticket {background-color:#E9E2CD; color:#7d6654;}
+	.message a:hover, span.ticket:hover {background-color:#5A91E7; color:#fff; text-shadow:#1C2955 0px 1px 0px;}
+	.message a:active, span.ticket:active {background-color:#4977BE;}
+
+/* item list */
+.item_list {word-wrap:break-word; font-size:11px; color:#9298B1;}
+.item_list .item {margin:5px 0 5px 60px;}
+.item .dir, .item a {padding:1px 2px 2px 3px; margin:0 -2px 0 -3px;}
+.item a {border-radius:3px;}
+	.item a:hover {background:#5A91E7; color:#fff; text-shadow:#2747B3 0px 1px 0px;}
+	.item a:active {background-color:#4977BE;}
+.item a span {color:#36547f;}
+	.item a:hover span {color:#fff;}
+.status {float:left; margin-left:-60px; width:45px; padding:1px 2px 2px 6px; border-radius:8px;
+		text-transform:capitalize; text-align:center; font-size:9px; font-weight:bold;}
+	.status.added {background:#D6F9D6; color:#5F7B59;}
+	.status.deleted {background:#F8DEE8; color:#906669;}
+	.status.modified {background:#D5E3F9; color:#626A75;}
+	.status.replaced {background:#F6E1D1; color:#83754D;}
+
+/* more button area */
+#more {height:44px; padding:1px 0 0 0; background:url('timeline_more_jagged.png'); background-size:6px 90px; color:#888; text-shadow:#fff 0px 1px 0px;}
+#more.load:active {background-position:0px 45px;}
+#more.load:active span {opacity:0.8;}
+#more.end {background-image:url('timeline_more_end.png'); background-size: 6px 45px;}
+
+#more.disabled #load {opacity:0.5;}
+
+#more #more_progress {display:none;}
+#more #end {display:none;}
+#more.progress #load {display:none;}
+#more.progress #more_progress {display:block;}
+#more.end #load {display:none;}
+#more.end #end {display:block;}
+
+#more div {text-align:center; margin-top:20px;}
+#more #load span {
+		background:url('timline_more_icon.png') center left no-repeat;
+		background-position-y: 2px;
+		background-size: 10px 13px;
+		padding-left:13px;
+	}
+#more_progress {height:15px; width:15px; position:relative; margin-left:auto; margin-right:auto;}
+
+/* Retina Support */
+@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		.header .disclosure {background:url('timeline_disclosure@2x.png') 11px 0px;}
+		.commit {background:#fff url('timeline_track@2x.png') 14px 0px repeat-y; }
+		#more {background:url('timeline_more_jagged@2x.png'); }
+		#more.end {background-image:url('timeline_more_end@2x.png'); }
+		.icon.wc_missing {background:url("timeline_icon_wc_missing@2x.png")center center no-repeat;}
+		.icon.wc_not {background:url("timeline_icon_wc_not@2x.png")center center no-repeat;}
+		.icon.connection {background:url("timeline_icon_connection@2x.png")center center no-repeat;}
+		.icon.history {background:url("timeline_icon_history@2x.png")center center no-repeat;}
+		#more #load span {background:url('timline_more_icon@2x.png') center left no-repeat;}
+    }

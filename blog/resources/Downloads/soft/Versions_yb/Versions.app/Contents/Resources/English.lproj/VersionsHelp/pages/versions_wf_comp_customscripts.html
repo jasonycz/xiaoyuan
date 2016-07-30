@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>Custom comparison scripts</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span><a href="versions_workflow.html">Versions workflow</a>
+			<span class="divider">&#x25B6;</span><a href="versions_wf_compare.html">Comparing differences</a>
+			<span class="divider">&#x25B6;</span>Custom comparison scripts
+
+    		
+		</div>
+
+        
+		<h1>Custom comparison scripts</h1>
+		<div class="contents">
+			<h2>Build your own</h2>
+			<p>If your favorite comparison application is not listed in the <a class="internal" href="versions_wf_comp_requirements.html">Requirements</a> section, or if you want to use different applications for different types of files, or maybe even pre-process some files before you compare them, you can make your own comparison script. The script will be called with 2 or more parameters. If it has 2 parameters, the two files should be compared.
+			<p>If a third parameter is passed and it's not empty, the script can save a file with the merged changes of the first parameters to the path at the third parameter. For instance, when comparing the local changes of a working copy file, the third parameter will be the same as the second parameter. A compare tool can then ask the user if they want to keep the local changes, and save the final file to the path at the third parameter. This way a user can discard changes they've made if desired.</p>
+			<p>Custom compare scripts may be called with more than 3 parameters in the future. Writers of custom compare scripts should make sure they only use the first three parameters for now.</p>
+			<h2>And use it</h2>
+			<p>First make sure to create a <span class="term">Compare Scripts</span> folder in the following location <span class="term">~/Library/Application Support/Versions/</span> (<span class="term">~</span> refers to your Home folder). Then copy your script to that newly created folder and it will show up as an option in the &ldquo;File Comparison:&rdquo; popup menu in the &ldquo;Preferences&rdquo; window.</p>
+		</div>
+	
+
+	</body>
+
+</html>
+
+

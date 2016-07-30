@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>Advanced topics</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span>Advanced topics
+
+    		
+		</div>
+
+        
+		<h1>Advanced topics</h1>
+		<div class="contents">
+			<h2>Setting up an svn+ssh connection</h2>
+			<p>Versions can authenticate <span class="term">svn+ssh://</span> connections both by using your password &mdash;which Versions stores in your Keychain&mdash; or by using ssh key-pair authentication. If you also use the svn command-line client, chances are you already have an ssh key-pair set up. To make Versions authenticate with your private key, simply enter your username in your repository bookmark and leave the password field blank.</p>
+		
+			<h2>Custom port numbers</h2>
+			<p>If you want to create a bookmark to a repository with a custom port number, there are two ways you can do this, depending on what kind of protocol you use.</p>
+				
+			<p>For http and https repositories, enter a colon followed by the port number at the end of the first part of the URL, like you would in a web browser. For example type <span class="term">http://svn.webkit.org:80/repository/webkit</span> in the Location field for a repository bookmark to access the public Webkit repository at port 80.</p>
+
+			<p>If you use the svn+ssh protocol, there are two ways you can use custom port numbers.</p>
+
+			<p>One is by editing your Subversion configuration and creating a new tunnel with a custom port number. This is demonstrated in <a href="http://svnbook.red-bean.com/en/1.7/svn.serverconfig.svnserve.html#svn.serverconfig.svnserve.sshauth" target="_blank"> the SVN book</a>, where a 'joessh' tunnel is created that connects to port 29934.</p>
+
+			<p>The other way is to edit the <span class="term">.ssh/config</span> file and creating a host with a custom port. An example of this can be seen on <a href="http://svn.haxx.se/users/archive-2004-09/0574.shtml" target="_blank">the SVN users list</a>.</p>
+		</div>
+	
+
+	</body>
+
+</html>
+
+

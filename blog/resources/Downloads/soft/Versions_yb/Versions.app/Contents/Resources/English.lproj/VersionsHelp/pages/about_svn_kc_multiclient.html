@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>Multiple clients</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span><a href="about_svn.html">About Subversion</a>
+			<span class="divider">&#x25B6;</span><a href="about_svn_kc.html">Key concepts</a>
+			<span class="divider">&#x25B6;</span>Multiple clients
+
+    		
+		</div>
+
+        
+		<h1>Multiple clients</h1>
+		<div class="contents">
+			<h2>Mix and match</h2>
+			<p>One of the cool things about Subversion is that you don&rsquo;t have to stick to just one client application to work with a specific working copy. You can, for instance, on the same project use Versions alongside with the command-line <span class="term">svn</span> client, <a href="http://www.panic.com/coda" target="_blank">Coda</a>&#39;s Subversion integration and Xcode&#39;s integrated Subversion support.</p>
+
+			<h2>Which version to use</h2>
+			<p>Versions can use Subversion 1.4, 1.5, 1.6, 1.7 and 1.8 under the hood. Some other applications, including Xcode, only support Subversion 1.7 at the time of writing. When using our Versions Subversion client with 1.7 set as your default svn library, we will offer to update any working copies you access that are in older formats so you can use 1.7. This will make the working copy incompatible with Subversion 1.6 clients.  Nothing will happen to your repository, but if you want to use the same working copy with several clients, make sure they all support using the same release of Subversion.</p>
+			<p>Subversion 1.7 is the default release used by Versions. You can choose to use 1.8 (or older libraries) in Versions&rsquo; Preferences window. If you do not need Subversion 1.6 compatibility, version 1.7 does offer some significant improvements. The Subversion 1.7 <a  href="http://subversion.apache.org/docs/release-notes/1.7.html" target="_blank">release notes</a> offer more information about what&#39;s new in that release.</p>
+			<p>The big take-away here is to use the same Subversion version across all your servers and clients to avoid any headaches.</p>
+
+			<h2>Being busy</h2>
+			<p>One drawback of using multiple Subversion clients is that if they make changes to one working copy at the same time, the results are pretty hard to predict. Subversion prevents this from happening by marking items in the working copy as <span class="term">busy</span> when a client application is working on them. This stops other Subversion clients on your computer from doing anything with those files at the same time. This &lsquo;busy&rsquo; state is often referred to as a <span class="term">Working copy lock</span>.</p>
+			<p>You might now and then run into items that remain &lsquo;busy&rsquo; even after your Subversion client is long done with them. When that happens, simply choose &ldquo;Cleanup All Working Copy Locks&rdquo; from the &ldquo;Action&rdquo; menu to be able to commit and update again.</p>
+		</div>
+	
+
+	</body>
+
+</html>
+
+

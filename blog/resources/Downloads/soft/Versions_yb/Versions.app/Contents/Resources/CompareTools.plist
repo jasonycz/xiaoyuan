@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Compares Images</key>
+		<true/>
+		<key>Name</key>
+		<string>Araxis Merge</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>AraxisMerge.sh</string>
+		<key>Application</key>
+		<string>Araxis Merge</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>BBEdit</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>BBEdit.sh</string>
+		<key>Application</key>
+		<string>BBEdit</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Changes</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>Changes.sh</string>
+		<key>Application</key>
+		<string>Changes</string>
+		<key>Application Identifier</key>
+		<array>
+			<string>com.bitbq.Changes</string>
+			<string>com.skorpiostech.Changes</string>
+		</array>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>DeltaWalker</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>DeltaWalker.sh</string>
+		<key>Application</key>
+		<string>DeltaWalker</string>
+		<key>Application Identifier</key>
+		<string>com.deltopia.deltawalker</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>DiffMerge</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>DiffMerge.sh</string>
+		<key>Application</key>
+		<string>DiffMerge</string>
+		<key>Application Identifier</key>
+		<string>com.sourcegear.DiffMerge</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>FileMerge</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>FileMerge.sh</string>
+		<key>Application</key>
+		<string>FileMerge</string>
+		<key>Application Identifier</key>
+		<string>com.apple.FileMerge</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>P4Merge</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>P4Merge.sh</string>
+		<key>Application</key>
+		<string>p4merge</string>
+		<key>Application Identifier</key>
+		<string>com.perforce.p4merge</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>TextMate</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>TextMate.sh</string>
+		<key>Application</key>
+		<string>TextMate</string>
+		<key>Application Identifier</key>
+		<string>com.macromates.TextMate</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>TextWrangler</string>
+		<key>Type</key>
+		<string>ApplicationBinary</string>
+		<key>Path</key>
+		<string>TextWrangler.sh</string>
+		<key>Application</key>
+		<string>TextWrangler</string>
+	</dict>
+</array>
+</plist>

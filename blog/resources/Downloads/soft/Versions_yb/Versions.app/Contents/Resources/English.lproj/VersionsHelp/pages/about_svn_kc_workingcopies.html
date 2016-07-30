@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>Working copies</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span><a href="about_svn.html">About Subversion</a>
+			<span class="divider">&#x25B6;</span><a href="about_svn_kc.html">Key concepts</a>
+			<span class="divider">&#x25B6;</span>Working copies
+
+    		
+		</div>
+
+        
+		<h1>Working copies</h1>
+		<div class="contents">
+			<h2>It&#39;s where you do the work</h2>
+			<p>A working copy is a local checked out copy of a repository. Where a repository offers access to files and folders for every <span class="term">revision</span>, a working copy behaves just like a normal folder on your hard disk that contains one particular revision of these items. You can use any application to modify the items in a working copy, just like you can in any other folder. Subversion keeps track of which file in the working copy belongs where in a repository, so when you create a new file in your working copy, it will initially be seen by Subversion as an <span class="term">unversioned</span> item. When you delete a file or folder from your working copy, Subversion will see it as <span class="term">missing</span>.
+
+			<h2>Adding and deleting files</h2>
+			<p>To actually add a new (unversioned) file or folder to your repository, you first schedule it for addition. When you commit your changes, the item will be added to the repository, creating a new revision. To delete a file, you schedule it for deletion and commit your changes. Because Subversion keeps track of previous revisions, you can always retrieve deleted files, as long as they were once part of the repository.</p>
+			<p>Normally you&rsquo;ll just delete a file from your working copy and it will show as <span class="term">missing</span> in Versions, making it easier to spot which file you wanted to get rid of.</p>
+		
+			<h2>Everything is explicit</h2>
+			<p>To store any kind of change in your repository, you need to explicitly tell Subversion to do so. Versions make this easier by letting you clearly see, review and then commit all changes in your working copy at once. You will still have to <span class="term">add</span> or <span class="term">delete</span> files explicitly for them to show up in, or be removed from, the repository when you commit.</p>
+		
+		</div>
+	
+
+	</body>
+
+</html>
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>About &ldquo;trunk&rdquo;, &ldquo;tags&rdquo; &amp; &ldquo;branches&rdquo;</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span><a href="about_svn.html">About Subversion</a>
+			<span class="divider">&#x25B6;</span><a href="about_svn_kc.html">Key concepts</a>
+			<span class="divider">&#x25B6;</span>About &ldquo;trunk&rdquo;, &ldquo;tags&rdquo; &amp; &ldquo;branches&rdquo;
+
+    		
+		</div>
+
+        
+		<h1 style="font-size: 1.2em;">About &ldquo;trunk&rdquo;, &ldquo;tags&rdquo; &amp; &ldquo;branches&rdquo;</h1>
+		<div class="contents">
+			<h2>Using the trunk and branches</h2>
+			<p>Subversion is a very general purpose tool, and unlike some other version control systems, any specific structure you define in your repository is completely optional.</p>
+
+			<p>The most common structure people use to configure their Subversion repositories is to have three folders defined at the repository&#39;s top level, <span class="term">trunk</span>, <span class="term">tags</span> and <span class="term">branches</span>.</p>
+		
+			<p>In smaller software projects, the trunk folder usually contains the most current version of the project&#39;s files. Most people in the team will just have a working copy of the trunk stored on their own computers and do all of their work in there. In bigger projects, developers will often make a copy of the trunk in the branches folder, and do their work in a working copy of the <span class="term">branch</span> they created.</p>
+			
+			<p>Some teams let every developer work in their own development branch, periodically <span class="term">merging</span> everyone&#39;s individual changes to the trunk. Another common approach is to create a seperate branch for major new versions of the project, or other large endeavors that will carry some dramatic changes to the entire project with them.</p>
+		
+			<h2>Tagging releases</h2>
+		
+			<p>The tags folder is used to create snapshots of the trunk at a specific revision. Most software teams use this method to <span class="term">tag</span> individual releases of their software. Using tags in this way makes it easier for developers to get a copy of their application&#39;s source code for a specific given release.</p>
+
+			<h2>It&#39;s just copying, mostly</h2>
+
+			<p>To create a branch or tag, all you need to do is copy the entire trunk folder over to a new subfolder in the branches or tags folder. The easiest way to do this is to browse the repository (not the working copy) and make such a copy there. That way, Subversion can take care of the actual copying, instead of having to transfer the entire contents of the trunk to your local working copy and sending it back to the server again.</p>
+		
+			<p>There is no need to be concerned about disk space, Subversion is quite smart about making copies. If two folders are nearly identical, Subversion will only store just enough information to be able to reliably reconstruct the files when you do a checkout or <span class="term">export</span>.</p>
+		
+			<h2>Real world examples</h2>
+		
+			<p>To learn more about how to use the branches and tags folders effectively, take a look at any large open-source project&#39;s Subversion repository, like for instance <a href="http://www.webkit.org/building/checkout.html" target="_blank">WebKit</a>. You&rsquo;ll see that new development usually takes place in a branch and you&rsquo;ll find tags for just about any release that ever went out the door.</p>
+		
+			<p>Even if you do not see a direct need for the trunk, tags and branches folders in your project right now, if you use Subversion for something that will be released to people outside your team, it is still recommended to set up this default structure. If you ever do need to tag or branch, it&#39;s a lot easier to already have those folders around than to re-organize your repository later on.</p>
+		</div>
+	
+
+	</body>
+
+</html>
+
+

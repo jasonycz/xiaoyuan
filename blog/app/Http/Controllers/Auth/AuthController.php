@@ -1,10 +1,10 @@
 <?php
 
-namespace xiaoyuan\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use xiaoyuan\User;
+use App\User;
 use Validator;
-use xiaoyuan\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

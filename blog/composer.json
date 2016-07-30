@@ -20,7 +20,7 @@
             "database"
         ],
         "psr-4": {
-            "xiaoyuan\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

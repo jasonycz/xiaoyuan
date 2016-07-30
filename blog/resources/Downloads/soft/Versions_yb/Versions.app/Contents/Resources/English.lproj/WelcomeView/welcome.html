@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Welcome &amp; Setup</title>
+	
+	<style type="text/css" media="screen">
+		body {margin:0; padding:0; background-color:#08233b; font-family:"Lucida Grande", 
+		Helvetica, sans-serif; font-size:12px;
+			-webkit-user-select:none; cursor:default; }
+		a {text-decoration:none; cursor:default;}	
+		body.inactive {background-color:#192d42;}
+		body.inactive #banner_beta, body.inactive #banner_demo, body.inactive #buttons {opacity:0.7;}
+
+		#betabanner, #demobanner {position:fixed; top:0; right:0; z-index:1; width:173px; height:173px; }
+		#betabanner {/* out */}
+		#demobanner {/* out */}
+		
+		#buttons {position:absolute; top:50%; left:50%; margin:-150px 0 0 -124px; width:248px; height:291px;}
+		.label {font-size:; font-weight:; text-shadow:#000 0 -1px 0; color:#fff;}
+		
+		.button_big {
+		    display:block; 
+		    width:248px; 
+		    height:56px; 
+		    position:relative; 
+		    background:url("welcome_button_big.png");
+		    background-size: 248px 112px;
+			margin:0 0 7px 0; 
+			border: none;
+		}
+		.button_big.ui-state-active {background-position:0px 56px; }
+		.button_big .label {position:absolute; top:20px; left:53px; color:#dae6ee;}
+		.button_big .icon {position:absolute; top:12px; left:12px; height:31px; width:31px; background-size: 31px 31px; }
+			.repo .icon {background-image:url("welcome_icon_repo.png"); }
+			.wc .icon {background-image:url("welcome_icon_wc.png");}
+
+		a.button_small, .button_small {
+		    display:block; 
+		    width:248px; 
+		    height:45px; 
+		    position:relative;
+			background:url("welcome_button_small.png");
+			background-size: 248px 91px;
+			margin:0 0 5px 0; 
+			border: none;
+		}
+		.button_small.ui-state-active {background-position:0px 46px;}
+		.button_small .label {position:absolute; top:15px; left:53px; color:#87a2b8;}
+		.button_small .icon {position:absolute; top:6px; left:12px; height:31px; width:31px; background-size: 31px 31px}
+			.local_repo .icon {background-image:url("welcome_icon_local.png"); }
+			.assembla .icon {background-image:url("welcome_icon_assembla.png"); }
+			.help .icon {background-image:url("welcome_icon_support.png");}
+		
+			
+	    @media
+        	only screen and (-webkit-min-device-pixel-ratio: 2),
+        	only screen and (   min--moz-device-pixel-ratio: 2),
+        	only screen and (     -o-min-device-pixel-ratio: 2/1),
+        	only screen and (        min-device-pixel-ratio: 2),
+        	only screen and (                min-resolution: 192dpi),
+        	only screen and (                min-resolution: 2dppx) {
+        	    .button_big {background:url("welcome_button_big@2x.png"); }
+        	        .repo .icon {background-image:url("welcome_icon_repo@2x.png");}
+        	        .wc .icon {background-image:url("welcome_icon_wc@2x.png");}
+        	    a.button_small, .button_small { background:url("welcome_button_small@2x.png"); }
+            	    .local_repo .icon {background-image:url("welcome_icon_local@2x.png"); }
+        			.assembla .icon {background-image:url("welcome_icon_assembla@2x.png"); }
+        			.help .icon {background-image:url("welcome_icon_support@2x.png");}
+    	    }
+		
+	</style>
+	<script type="text/javascript" charset="utf-8">
+		function __makeInactive() {
+			document.body.className = "inactive";
+		}
+		function __makeActive() {
+			document.body.className = "active";
+		}
+	</script>
+	<script src="jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="welcome.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+<body class="active">
+
+<div id="betabanner" ></div>
+<div id="demobanner" style="display:none;" onclick="versions.registerVersions();"></div>
+
+<div id="buttons">
+	<button class="button_big repo" onclick="versions.addNewRepositoryBookmark();">
+		<div class="icon"></div><div class="label">New Repository Bookmark</div>
+	</button>
+	<button class="button_big wc" onclick="versions.addNewWorkingCopyBookmark();">
+		<div class="icon"></div><div class="label">New Working Copy Bookmark</div>
+	</button>
+	<button class="button_small assembla" style="margin-top:25px;" onclick="versions.addAssemblaRepositoryBookmark();">
+		<div class="icon"></div><div class="label">Free Online Repository</div>
+	</button>
+	<button class="button_small local_repo" onclick="versions.createNewRepository();">
+		<div class="icon"></div><div class="label">Create Local Repository</div>
+	</button>
+	<button class="button_small help" onclick="versions.openDocumentationAndSupport();">
+		<div class="icon"></div><div class="label">Documentation &amp; Support</div>
+	</button>
+</div>
+
+</body>
+</html>

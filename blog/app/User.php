@@ -1,6 +1,6 @@
 <?php
 
-namespace xiaoyuan;
+namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>Which Subversion release?</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span><a href="versions_faq.html">FAQ</a>
+			<span class="divider">&#x25B6;</span>Which Subversion release?
+
+    		
+		</div>
+
+        
+		
+		<h1>Versions' Subversion versions</h1>	
+		<div class="contents">
+			<a name="VersionsHelpWhichSVNVersion"></a>
+			<h2>Should I use Subversion 1.4, 1.5, 1.6, 1.7 or 1.8?</h2>
+			
+			<p>If you only use Versions, use the default Subversion 1.7.</p>
+			
+			<p>If you also need to be able to use Subversion integration in another application, make sure you use the same major release (e.g. 1.6 or 1.7) in Versions as those applications use.</p>
+			
+			<p>Xcode 5 also uses SVN 1.7 under the hood. So in most cases, using SVN 1.7 is the way to go.</p>
+			
+			<h2>Why even offer the choice?</h2>
+			<p>Different major releases of Subversion use a different structure for their working copies. When you first access an older working copy with a client using Subversion 1.7, that working copy needs to be upgraded to use the new SVN 1.7 structure. From that moment on, a client application using Subversion 1.6, or earlier, can't access the working copy anymore.</p>
+			<p>In short: To prevent headaches, make sure that every Subversion client on your Mac uses the same major release of Subversion.</p>
+			<p>Good to know: This <strong>only</strong> affects your working copies, your repository cannot be changed by just using it with a newer client.</p>
+		</div>
+	
+
+	</body>
+
+</html>
+
+

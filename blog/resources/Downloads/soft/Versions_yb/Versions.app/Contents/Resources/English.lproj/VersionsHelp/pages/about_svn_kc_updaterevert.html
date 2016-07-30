@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>Updating and reverting</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span><a href="about_svn.html">About Subversion</a>
+			<span class="divider">&#x25B6;</span><a href="about_svn_kc.html">Key concepts</a>
+			<span class="divider">&#x25B6;</span>Updating and reverting
+
+    		
+		</div>
+
+        
+		<h1>Updating and reverting</h1>
+		<div class="contents">
+			<h2>At your command</h2>
+			<p>Just like you need to explicitely tell Subversion to commit changes you've made, you need to manually tell Subversion to <span class="term">update</span> the working copy from time to time. When you update, the contents of your working copy are updated with all of the changes that have been committed to the repository since you last updated.</p>
+			<p>Subversion is pretty smart about updating and never just overwrites files that have local changes with copies from the repository.</p>
+			<p>The most important thing to take away from this section is: If you collaborate with others on one repository, remember to update your working copy regularly. Check the option &ldquo;Show Updates from Repository&rdquo; in the &ldquo;View&rdquo; menu to see which files have remote changes without having to constantly hit the update button.</p>
+		
+			<h2>Resolving conflicts</h2>
+			<p>Subversion can run into conflicts from time to time, most commonly when a co-worker has made changes to a file you were working on too. When a conflict happens, Subversion will first try to resolve it itself, which is easy when both changes were in very different parts of the file. If Subversion can&rsquo;t figure out what to do itself, it will create several new temporary files next to the original conflicting file. These new files represent different possible versions (base revision, yours, your coworker&#39;s) of the file, allowing you to mix and match to resolve the conflict. The original file will contain both your and your co-workers changes. When you are satisfied with the your new version of the file, you can mark it as <span class="term">resolved</span>. Subversion will then clean up the temporary files, making it ready to commit again.</p>
+		
+			<h2>Reverting changes</h2>
+			<p>One of the biggest advantages of using Subversion is that you can freely experiment with files, without actually messing anything up. The <span class="term">revert</span> command lets you get rid of any local changes you have made. So if you try something and it doesn&rsquo;t work out, undoing it is just a click away.</p>
+			<p>The revert command only affects the files or folders you tell it to, so you can revert changes to one file without losing any of your work on other files.</p>
+		</div>
+	
+
+	</body>
+
+</html>
+
+

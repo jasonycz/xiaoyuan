@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../media/style.css" />
+		<title>About &ldquo;HEAD&rdquo; and &ldquo;BASE&rdquo;</title>
+		
+		<meta name="viewport" content="width = 400">
+	</head>
+
+	<body>
+		<div class="topbar">
+		    
+    		    <a href="index.html">Home</a>
+    		    
+			<span class="divider">&#x25B6;</span><a href="about_svn.html">About Subversion</a>
+			<span class="divider">&#x25B6;</span><a href="about_svn_kc.html">Key concepts</a>
+			<span class="divider">&#x25B6;</span>About &ldquo;HEAD&rdquo; and &ldquo;BASE&rdquo;
+
+    		
+		</div>
+
+        
+		<h1>About &ldquo;HEAD&rdquo; and &ldquo;BASE&rdquo;</h1>
+		<div class="contents">
+			<p>Besides automatically numbering your revisions when you commit, Subversion repositories also have a couple of &lsquo;meta-revisions&rsquo;. The most important &lsquo;meta-revisions&rsquo; are <span class="term">HEAD</span> and <span class="term">BASE</span>.</p>
+			<p>The HEAD revision refers to the most current revision in a repository. If you are browsing the HEAD revision of your repository and one of your teammates commits a change, those new changes will be included when you decide to check out a working copy of that revision or fetch specific information about it.</p>
+			<p>The BASE revision refers to the last revision you updated your working copy to. If you create a working copy of your repository at revision 100, the BASE revision of every file in your working copy is 100. If somebody else commits changes to the same file before you do, you can compare your local changes to the BASE revision, or update your file to let Subversion try and merge the new remote changes into your local copy. If the update succeeds, the BASE revision of your file will be changed to match the latest version in the repository.</p>
+		</div>
+	
+
+	</body>
+
+</html>
+
+
